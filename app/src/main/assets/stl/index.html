@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asher App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="functions.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+	<section class="section-1">
+		<div class="row flex between">
+			<div>
+				<h1 class="logo">STL</h1>
+			</div>
+			<div class="date align-right">
+				<i class="far fa-calendar-alt"></i>
+				<p><?php date_default_timezone_set("Asia/Manila"); echo date("F j, Y") ?></p>
+			</div>
+			<!-- <div class="time">
+                <i class="far fa-clock"></i>
+                <p><?php date_default_timezone_set("Asia/Manila"); echo date("g:i A") ?></p>
+            </div> -->
+		</div>
+
+
+	</section>
+
+
+	<section class="section-2">
+		<div class="row col2 options-btn">
+			<div>
+				<i class="far fa-trash-alt"></i>
+				<button class="btn full clear-a">Clear All</button>
+			</div>
+			<div>
+				<i class="fas fa-print"></i>
+				<button class="btn full print">Print</button>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section-3 bet-list">
+		<div class="row scroll-3">
+			<div class="bet-list-item" >
+				<div class="bet-count" >
+					<p>1</p>
+				</div>
+				<div class="bet-combi">
+					<p>123</p>
+					<label>Combi</label>
+				</div>
+				<div class="bet-amount">
+					<p>50</p>
+					<label>Bet<label>
+				</div>
+				<div class="bet-draw-time">
+					<p>2PM</p>
+					<label>TIME</label>
+				</div>
+				<div class="bet-isrumbled">
+					<p><span>R</span></p>
+				</div>
+
+				<div>
+					<button class="bet-delete"><i class="far fa-trash-alt"></i></button>
+				</div>
+			</div>
+
+			<div class="bet-list-item" >
+				<div class="bet-count" >
+					<p>2</p>
+				</div>
+				<div class="bet-combi">
+					<p>23-02</p>
+					<label>Combi</label>
+				</div>
+				<div class="bet-amount">
+					<p>30</p>
+					<label>Bet<label>
+				</div>
+				<div class="bet-draw-time">
+					<p>5PM</p>
+					<label>TIME</label>
+				</div>
+				<div class="bet-isrumbled false">
+					<p><span>R</span></p>
+				</div>
+
+				<div>
+					<button class="bet-delete"><i class="far fa-trash-alt"></i></button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section-4 npadding">
+		<div class="row col2 select">
+			<div>
+				<select id="gameType">
+					<option>Choose Game Type</option>
+					<option value="STL Pares" length="4">STL Pares</option>
+					<option value="STL 2D" length="2">STL 2D</option>
+					<option value="STL 3D" length="3">STL 3D</option>
+					<option value="STL 4D" length="4">STL 4D</option>
+					<option value="STL Pick 3" length="6">STL Pick 3</option>
+				</select>
+			</div>
+			<div>
+				<select id="drawTime">
+					<option>Choose Draw Time</option>
+					<option value="2PM">2PM</option>
+					<option value="5PM">5PM</option>
+					<option value="9PM">9PM</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row col3">
+			<div>
+				<input type="text" name="combination" readonly placeholder="Enter Number">
+			</div>
+			<div>
+				<input type="text" name="bet-amount" readonly placeholder="Enter Bet">
+			</div>
+			<div class="flex">
+				<input type="checkbox" name="is-rumbled">
+				<p>rumbled?</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section-5 input-buttons npadding">
+		<div class="row col3">
+			<div>
+				<button class="btn full num" value="1">1</button>
+			</div>
+			<div>
+				<button class="btn full num" value="2">2</button>
+			</div>
+			<div>
+				<button class="btn full num" value="3">3</button>
+			</div>
+		</div>
+
+		<div class="row col3">
+			<div>
+				<button class="btn full num" value="4">4</button>
+			</div>
+			<div>
+				<button class="btn full num" value="5">5</button>
+			</div>
+			<div>
+				<button class="btn full num" value="6">6</button>
+			</div>
+		</div>
+
+		<div class="row col3">
+			<div>
+				<button class="btn full num" value="7">7</button>
+			</div>
+			<div>
+				<button class="btn full num" value="8">8</button>
+			</div>
+			<div>
+				<button class="btn full num" value="9">9</button>
+			</div>
+		</div>
+
+		<div class="row col3">
+			<div>
+				<button class="btn full del" value="DEL">DEL</button>
+			</div>
+			<div>
+				<button class="btn full num" value="0">0</button>
+			</div>
+			<div>
+				<button class="btn full enter-btn" value="ENTER">ENTER</button>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+
+</body>
+</html>
